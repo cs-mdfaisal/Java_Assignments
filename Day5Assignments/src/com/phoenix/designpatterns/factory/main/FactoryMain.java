@@ -13,14 +13,22 @@ public class FactoryMain {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		/*System.out.println("enter a cartype ");
+		System.out.println("enter a cartype ");
 		Scanner sc =new Scanner(System.in);
 		String str=sc.nextLine();
-		String car=str.substring(0,1).toUpperCase()+str.substring(1);
-		sc.close();*/
 		
-		//Car newcar=CarFactory.newCar(car);
-		Car c1=CarFactory.newCar("sedan");
+		try{
+		
+		Car newcar=CarFactory.newCar(str);
+		newcar.start();
+		newcar.run();
+		newcar.stop();
+		}catch(Exception e)
+		{
+			System.out.println("Invalid Input");
+		}
+		
+		/*Car c1=CarFactory.newCar("sedan");
 		
 		c1.start();
 		c1.run();
@@ -45,7 +53,7 @@ public class FactoryMain {
 		
 		c4.start();
 		c4.run();
-		c4.stop();
+		c4.stop();*/
 	}
 
 }
